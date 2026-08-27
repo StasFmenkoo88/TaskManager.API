@@ -13,11 +13,11 @@ namespace TaskManager.API.Services
     {
         private readonly IMapper _mapper;
 
-        private readonly TaskRepository _taskRepository;
+        private readonly ITaskRepository _taskRepository;
 
         private readonly ILogger<TaskService> _logger;
 
-        public TaskService(TaskRepository taskRepository, IMapper mapper,ILogger<TaskService> logger)
+        public TaskService(ITaskRepository taskRepository, IMapper mapper, ILogger<TaskService> logger)
         {
             _taskRepository = taskRepository;
             _mapper = mapper;
